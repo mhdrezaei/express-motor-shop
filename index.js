@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const motors = require('./data/data.json');
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+app.use(express.static('./public'));
 
 app.get('/' ,(req,res)=>{
     res.render('shop');
