@@ -12,7 +12,9 @@ app.get('/' ,(req,res)=>{
 app.get('/product' ,(req,res)=>{
 
     const motor = motors.find((mtr) => mtr.id === req.query.id);
-    res.render('product');
+    res.render('product',{
+        motor
+    });
 });
 
 app.listen(3000 , () => console.log('server is running at 3000 port'));
