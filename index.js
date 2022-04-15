@@ -6,7 +6,9 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 
 app.get('/' ,(req,res)=>{
-    res.render('shop');
+    res.render('shop',{
+        motors
+    })
 });
 
 app.get('/product' ,(req,res)=>{
